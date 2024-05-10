@@ -1,0 +1,62 @@
+.aboutus-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 20px 5rem 20px ;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-image: url(https://pointcoffee.id/images/bg-abstract.png);
+    background-color: #fff;
+}
+
+.aboutus-image {
+    width: 50%;
+    height: 50%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.aboutus-image:hover {
+    transform: scale(1.05);
+}
+
+.aboutus-content {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.aboutus-title {
+    font-size: 3.5rem;
+    color: #007d48;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.aboutus-paragraph {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+
+@media (max-width: 768px) {
+    .aboutus-container {
+        flex-direction: column;
+    }
+
+    .aboutus-image {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .aboutus-content {
+        padding-left: 0;
+    }
+
+    .aboutus-title {
+        margin-bottom: 5px;
+    }
+}

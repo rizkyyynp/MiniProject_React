@@ -1,0 +1,126 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #007d48 ;
+  color: white;
+  position: fixed;
+  width: 100%;
+  margin: 0 auto;
+  z-index: 100;
+
+}
+
+.navbar-logo img {
+  height: 50px;
+  margin-left: 16px;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 25px;
+  margin-right: 50px;
+  
+}
+
+.navbar-link {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  margin-right: 50px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: all 0.3s;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-link{
+    color: #007d48;
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar-menu-open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 74px;
+    right: -15px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    background-color: #CDDBD1;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar-toggle.open .bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .navbar-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle.open .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  .navbar-link:hover::after {
+    width: 50%;
+  }
+  .navbar-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 120px;
+    width: 0;
+    height: 2px;
+    background-color: #007d48;
+    transition: width 0.3s;
+  }
+}
